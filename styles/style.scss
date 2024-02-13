@@ -1,0 +1,137 @@
+@import 'reset';
+
+$pale-blue: hsl(225, 100%, 94%);
+$primary: hsl(245, 75%, 52%);
+$very-pale-blue: hsl(225, 100%, 98%);
+$light-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+$lavender: hsl(244, 79%, 68%);
+
+$font-variable: "Red Hat Display", sans-serif;
+$padding: 1rem;
+$half-padding: .5rem;
+
+@mixin border() {
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+@mixin flexDisplay() {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper {
+    max-width: 34vw;
+    min-height: 100vh;
+    font-family: $font-variable;
+    @include flexDisplay();
+    background-color: $pale-blue;
+    padding: $padding;
+    margin: 0 auto;
+}
+.card {
+    background-color: hsl(0, 0%, 100%);
+    max-width: 30vw;
+    border-radius: 14px;
+}
+header img {
+   @include border();
+}
+.order-summary {
+    padding: $padding + 1;
+    text-align: center;
+   h1 {
+    color: $dark-blue;
+    font-weight: 900;
+    }
+    p{
+        color: $light-blue;
+        font-size: .9rem;
+    }
+    }
+.order-summary_pricing {
+    text-align: center;
+    @include flexDisplay();
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background-color: $very-pale-blue;
+    border-radius: 6px;
+    img {
+        width: 30px;
+    }
+}
+.order-summary_amount {
+    h2 {
+    font-size: 1em;
+    font-weight: 800;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    color: $dark-blue;
+}
+    p {
+        font-size: .8em;
+        color: $light-blue;
+    } 
+}
+.order-summary_pay {
+    button {
+    display: block;
+    width: 100%;
+    padding-top: $half-padding;
+    padding-bottom: $half-padding;
+    border-radius: 6px;
+    border: none;
+    background: $primary;
+    color: $very-pale-blue;
+    font-size: .9rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    box-shadow: 0 6px $very-pale-blue;
+}
+    button:hover {
+    background: $lavender;
+    cursor: pointer;
+    }
+    p {
+        font-size: .8em;
+        font-weight: 700;
+    }
+    p:hover {
+        color: hsl(0, 0%, 0%);
+        cursor: pointer;
+    }
+}
+a {
+    font-size: .8em;
+    font-weight: 700;
+  }
+  a:hover {
+    color: $lavender;
+}
+
+.attribution {
+    color: $dark-blue;
+    font-family: $font-variable;
+    margin: 2rem;
+    a {
+        color: $primary;
+    }
+}
+
+ @media only screen and (min-width: 344px) {
+    body{
+        background: hsl(0, 0%, 0%);
+    }
+ }
+ @media only screen and (min-width: 640px) {
+        .wrapper {
+          max-width: 100vw;
+          min-height: 100vh;
+          background-color: $pale-blue;
+        }
+      }
+
+
+
